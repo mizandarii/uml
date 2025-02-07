@@ -1,20 +1,13 @@
 @startuml 
-participant Alice
-participant Bob
-note left of Alice #aqua
-Will be displayed 
-left of Alice
-end note
 
-note right of Alice: will be displayed right of Alice
+== Initialization ==
 
-note over Alice: will be displayed over Alice
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
 
-note over Alice, Bob #FFAAAA: will be displayed\n over Alice and Bob.
+==Repetition==
 
-note over Bob, Alice
-this is another
-example of
-a long note.
-end note
+Alice-> Bob: Another authentication Request
+Alice-> Bob: Another authentication response
+
 @enduml
