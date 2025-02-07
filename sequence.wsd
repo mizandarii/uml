@@ -1,11 +1,5 @@
 @startuml sequence
-actor Bob #red
-' Единственная разница между actor 
-' и participant - это разная форма отображения
-participant Alice
-participant "У меня очень \nдлинное имя" as L #99FF99
-
-Alice->Bob: Authentication Request
-Bob->Alice: Authentication Response
-Bob->L: Log transaction
+participant Last order 30
+participant Middle order 20
+participant First order 10
 @enduml
