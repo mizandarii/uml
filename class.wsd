@@ -2,17 +2,14 @@
 title Синтаксис квадратных скобочек без заметок
 class foo
 class bar
-bar1 : [bold]
-bar2 : [dashed]
-bar3 : [dotted]
-bar4 : [hidden]
-bar5 : [plain]
+bar1 : [#red]
+bar2 : [#green]
+bar3 : [#blue]
 
-foo --> bar             : по умолчанию
-foo -[bold]-> bar1      : [жирный]
-foo -[dashed]-> bar2    : [штриховой]
-foo -[dotted]-> bar3    : [пунктирный]
-foo -[hidden]-> bar4    : [скрытый]
-foo -[plain]-> bar5     : [непрерывный]
+foo --> bar             : обычный
+foo -[#red]-> bar1      : [красный]
+foo -[#green]-> bar2    : [зеленый]
+foo -[#blue]-> bar3    : [синий]
+
 @enduml
 
