@@ -1,8 +1,12 @@
 @startuml 
 
-title __Simple__ communication example\non several lines
+box "Internal Service" #LightBlue
+participant Bob
+participant Alice
+end box
+participant Other
 
-Alice -> Bob: Authentication Request
-Bob-> Alice: Authentication Response
+Bob -> Alice : hello
+Alice -> Other : hello
 
 @enduml
