@@ -8,11 +8,11 @@ bar3 : [dotted]
 bar4 : [hidden]
 bar5 : [plain]
 
-foo --> bar
-foo -[bold]-> bar1
-foo -[dashed]-> bar2
-foo -[dotted]-> bar3
-foo -[hidden]-> bar4
-foo -[plain]-> bar5
+foo --> bar             : по умолчанию
+foo -[bold]-> bar1      : [жирный]
+foo -[dashed]-> bar2    : [штриховой]
+foo -[dotted]-> bar3    : [пунктирный]
+foo -[hidden]-> bar4    : [скрытый]
+foo -[plain]-> bar5     : [непрерывный]
 @enduml
 
