@@ -1,13 +1,8 @@
 @startuml 
 
-== Initialization ==
-
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-==Repetition==
-
-Alice-> Bob: Another authentication Request
-Alice-> Bob: Another authentication response
+Bob -> Alice: hello
+activate Alice
+Alice -> Alice : some action
+return bye
 
 @enduml
