@@ -1,25 +1,14 @@
 @startuml 
-autonumber 1.1.1
-Alice -> Bob: Authentication request
-Bob --> Alice: Response
 
-autonumber inc A
-'now we have 2.1.1
-Alice -> Bob: Another authentication request
-Bob --> Alice: Response
+Alice -> Bob : message 1
+Alice -> Bob : message 2
 
-autonumber inc B
-'now we have 2.2.1
-Alice -> Bob: Another authentication request
-Bob --> Alice: Response
+newpage
+Alice -> Bob : message 3
+Alice -> Bob : message 4
 
-autonumber inc A
-'now we have 3.1.1
-Alice -> Bob: Another authentication request
-Bob --> Alice: Response
+newpage A title for the \nlast page
 
-autonumber inc B
-'now we have 3.2.1
-Bob --> Alice: Response
-
+Alice -> Bob : message 5
+Alice -> Bob : message 6
 @enduml
