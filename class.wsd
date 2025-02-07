@@ -1,0 +1,21 @@
+@startuml  
+
+' задаем параметры для всех классов по умолчанию
+skinparam class{
+    ' зажаем светло-зеленый цвет для фона классов по умолчанию 
+    BackgroundColor LightGreen
+    ' задаем синий цвет для связей классов по умолчанию
+    ArrowColor  Blue
+    ' задаем красный цвет для контуров элементов по умолчанию
+    BorderColor Red
+}
+
+' задаем цвет кружочков внутри элементов по умолчанию
+skinparam StereotypeCBackgroundColor  Magenta
+
+Class01 "к одному" *-- "от многих" Class02: композиция
+
+CLass03 o-- Class04: агрегация
+
+@enduml
+
