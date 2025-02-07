@@ -8,14 +8,22 @@ skinparam class{
     ArrowColor  Blue
     ' задаем красный цвет для контуров элементов по умолчанию
     BorderColor Red
+    ' задаем красный цвет для фона классов, ждя которых шаблонов является Foo
+    BackgroundColor<< Foo >> Green
+    ' задаем оранжевый цвет для контуров классов, для которыъ шаблоном является Foo
+    BorderColor<< Foo >> Orange
 }
 
-' задаем цвет кружочков внутри элементов по умолчанию
+' задаем розовый цвет кружочков внутри элементов по умолчанию
 skinparam StereotypeCBackgroundColor  Magenta
+' задаем серый цвет кружочков внутри элементов, для которых шаблоном является Foo
+skinparam StereotypeCBackgroundColor<< Foo >> Gray
+
+Class01 <<Foo>>
+Class02 <<Foo>>
 
 Class01 "к одному" *-- "от многих" Class02: композиция
 
 CLass03 o-- Class04: агрегация
 
 @enduml
-
