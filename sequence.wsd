@@ -1,14 +1,24 @@
 @startuml 
+Alice -> Bob: Authentication Request
 
-Alice -> Bob : message 1
-Alice -> Bob : message 2
+alt successful case
 
-newpage
-Alice -> Bob : message 3
-Alice -> Bob : message 4
+    Bob -> Alice: Authentication Accepted
 
-newpage A title for the \nlast page
+else some kind of failure
 
-Alice -> Bob : message 5
-Alice -> Bob : message 6
+    Bob -> Alice: Authentication Failure
+    group My own label
+    Alice -> Log : Log attack start
+        loop 1000 times
+            Alice -> Bob: DNS Attack
+        end
+    Alice -> Log: Log attack end
+    end
+
+else Another type of failure
+
+    Bob-> Alice: Please repeat
+    
+end
 @enduml
