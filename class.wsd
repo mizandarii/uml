@@ -1,15 +1,18 @@
 @startuml  
-class Foo{
-    + field1
-    + field2
-}
+skinparam groupInheritance 1
 
-class Bar{
-    + field3
-    + field4
-}
+A1 <|-- B1
 
-Foo::field1 --> Bar::field3 : foo
-Foo::field2 --> Bar::field4 : bar
+A2 <|-- B2
+A2 <|-- C2
+
+A3 <|-- B3
+A3 <|-- C3
+A3 <|-- D3
+
+A4 <|-- B4
+A4 <|-- C4
+A4 <|-- D4
+A4 <|-- E4
 @enduml
 
