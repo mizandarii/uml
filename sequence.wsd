@@ -1,14 +1,20 @@
 @startuml 
-Alice->Bob : hillow
-note left: first note
+participant Alice
+participant Bob
+note left of Alice #aqua
+Will be displayed 
+left of Alice
+end note
 
-Bob->Alice : yep
-note right: another note
+note right of Alice: will be displayed right of Alice
 
-Bob->Bob: im thinking 'bout it
-note left
-notes
-can take up
-several lines
+note over Alice: will be displayed over Alice
+
+note over Alice, Bob #FFAAAA: will be displayed\n over Alice and Bob.
+
+note over Bob, Alice
+this is another
+example of
+a long note.
 end note
 @enduml
