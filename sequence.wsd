@@ -1,11 +1,19 @@
 @startuml 
-skinparam sequenceMessageAlign right
-Bob -> Alice : Request
-Alice -> Bob :Response
+Bob ->x Alice
+Bob -> Alice
+Bob ->> Alice
+Bob -\ Alice
+Bob \\- Alice
+Bob //-- Alice
+
+Bob ->o Alice
+Bob o\\-- Alice
+
+Bob <-> Alice
+Bob <->o Alice
 @enduml
 
-@startuml 
-skinparam responseMessageBelowArrow true
-Bob -> Alice : дай пять евро
-Alice -> Bob : нет, не дам
+@startuml
+Bob -[#red]> Alice : hello
+Alice -[#0000FF]->Bob : ok
 @enduml
