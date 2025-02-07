@@ -1,5 +1,5 @@
 @startuml  
-skinparam groupInheritance 1
+skinparam groupInheritance 4
 
 A1 <|-- B1
 
