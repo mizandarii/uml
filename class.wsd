@@ -1,9 +1,15 @@
 @startuml  
-class foo
-foo --> bar             : обычный
-foo --> bar1 #line:red;line.bold;text:red    : красный, жирный
-foo --> bar2 #green;line.dashed;text:green    : зеленый, штрих
-foo --> bar3 #blue;line.dotted;text:blue    : синий, пунктир
+class Foo{
+    + field1
+    + field2
+}
 
+class Bar{
+    + field3
+    + field4
+}
+
+Foo::field1 --> Bar::field3 : foo
+Foo::field2 --> Bar::field4 : bar
 @enduml
 
