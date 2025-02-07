@@ -1,17 +1,5 @@
 @startuml  
-
-skinparam backgroundcolor AntiqueWhite/Gold
-skinparam ClassBackgroundColor Wheat|CornfolwerBlue
-
-class Foo #red-lightgreen
-note left of Foo #lightblue\9932CC
-    это моя заметка
-    об этом классе
-end note
-
-package Пример #GreenYellow/LightGoldenRodYellow {
-    class Заглушка
-}
-
+class ArrayList implements List
+class ArrayList extends AbstractList
 @enduml
 
