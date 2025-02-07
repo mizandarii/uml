@@ -1,8 +1,8 @@
 @startuml 
 
-Bob -> Alice: hello
-activate Alice
-Alice -> Alice : some action
-return bye
+title __Simple__ communication example\non several lines
+
+Alice -> Bob: Authentication Request
+Bob-> Alice: Authentication Response
 
 @enduml
