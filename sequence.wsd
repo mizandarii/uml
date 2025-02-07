@@ -1,19 +1,25 @@
 @startuml 
-Bob ->x Alice
-Bob -> Alice
-Bob ->> Alice
-Bob -\ Alice
-Bob \\- Alice
-Bob //-- Alice
+autonumber 1.1.1
+Alice -> Bob: Authentication request
+Bob --> Alice: Response
 
-Bob ->o Alice
-Bob o\\-- Alice
+autonumber inc A
+'now we have 2.1.1
+Alice -> Bob: Another authentication request
+Bob --> Alice: Response
 
-Bob <-> Alice
-Bob <->o Alice
-@enduml
+autonumber inc B
+'now we have 2.2.1
+Alice -> Bob: Another authentication request
+Bob --> Alice: Response
 
-@startuml
-Bob -[#red]> Alice : hello
-Alice -[#0000FF]->Bob : ok
+autonumber inc A
+'now we have 3.1.1
+Alice -> Bob: Another authentication request
+Bob --> Alice: Response
+
+autonumber inc B
+'now we have 3.2.1
+Bob --> Alice: Response
+
 @enduml
