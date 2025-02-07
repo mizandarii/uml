@@ -1,9 +1,35 @@
-@startuml 
+@startuml
+actor Customer
+participant "Online Store" as Store
+participant "Payment Gateway" as Payment
+participant "Delivery Service" as Delivery
 
-Alice -> Bob: запрос авторизации
-alt#Gold #LightBlue успешнай кейс
-    Bob -> Alice: запрос удовлетворен
-else #Pink ошибка
-    Bob->Alice: запрос отклонен
-end
+== Browsing Products ==
+Customer -> Store: Open Website
+Store -> Customer: Display Homepage
+Customer -> Store: Search for Products
+Store -> Customer: Display Product Listings
+Customer -> Store: View Product Details
+
+== Placing an Order ==
+Customer -> Store: Add Product to Cart
+Customer -> Store: Proceed to Checkout
+Store -> Customer: Show Order Summary
+Customer -> Store: Enter Shipping Details
+Customer -> Store: Choose Payment Method
+Customer -> Payment: Process Payment
+Payment -> Store: Confirm Payment
+Store -> Customer: Order Confirmation
+
+== Shipping ==
+Store -> Delivery: Arrange Shipment
+Delivery -> Customer: Send Tracking Information
+Delivery -> Customer: Deliver Order
+
+== Returns ==
+Customer -> Store: Request Return
+Store -> Delivery: Initiate Pickup
+Delivery -> Store: Return Item
+Store -> Customer: Refund Processed
+
 @enduml
