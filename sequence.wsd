@@ -1,5 +1,3 @@
 @startuml sequence
-participant Last order 30
-participant Middle order 20
-participant First order 10
+Alice -> Alice: Это сигнал самому себе.\nТакже это является демонстрацией \nмногострочного текста.
 @enduml
